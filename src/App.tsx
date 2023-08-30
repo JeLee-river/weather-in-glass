@@ -11,14 +11,14 @@ import Weather from './pages/Weather';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/category" element={<Category />} />
-        <Route path="/random" element={<Random />} />
-        <Route path="/game" element={<Game />} />
-        <Route path="/weather" element={<Weather />} />
-        <Route path="/detail/:id" element={<Detail />} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/category' element={<Category />} />
+        <Route path='/random' element={<Random />} />
+        <Route path='/game' element={<Game />} />
+        <Route path='/weather' element={<Weather />} />
+        <Route path='/detail/:id' element={<Detail />} />
       </Routes>
     </BrowserRouter>
   );
