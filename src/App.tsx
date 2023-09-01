@@ -11,7 +11,7 @@ import Weather from './pages/Weather';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/category' element={<Category />} />
