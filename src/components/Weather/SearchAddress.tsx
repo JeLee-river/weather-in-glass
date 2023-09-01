@@ -43,7 +43,6 @@ export function SearchAddress(): JSX.Element {
     const getGeocoderData = async () => {
       try {
         const result = await GeocoderAPI(address);
-        console.log(result);
         setGeocoderData(result);
 
         dispatch(
