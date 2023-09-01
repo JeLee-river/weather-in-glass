@@ -15,7 +15,6 @@ function Contents() {
   const getWholeCocktails = async () => {
     try {
       const wholeCocktailsList = await getWholeCocktailUsingAlphabet();
-      console.log('전체데이터: ', wholeCocktailsList);
       return wholeCocktailsList;
     } catch (err) {
       throw new Error('모든 칵테일 정보를 받아오는데 실패했습니다.');
@@ -34,7 +33,7 @@ function Contents() {
   return (
     <>
       <div className={styles.titleBox}>
-        <NavLink to="/category" className={styles.title}>
+        <NavLink to='/category' className={styles.title}>
           Browsing our cocktails!
         </NavLink>
       </div>

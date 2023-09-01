@@ -25,11 +25,6 @@ function Pagination({
         : currentPage - (currentPage % 5) + 1
       : currentPage;
 
-  //디버깅
-  useEffect(() => {
-    console.log('현재페이지', currentPage);
-  }, [currentPage]);
-
   const handlePreviousPageClick = () => {
     if (currentPage > 1) {
       handlePageQueryChange(currentPage - 1);

@@ -17,12 +17,6 @@ function AlcoholicOps() {
   const [alcoholFilteredList, setAlcoholFilteredList] =
     useState<cocktailListType[]>(searchResults);
 
-  //디버깅
-  useEffect(() => {
-    console.log('알코올 필터링 변경', alcoholicOps);
-    console.log('알코올 필터링된 목록', alcoholFilteredList);
-  }, [alcoholicOps, alcoholFilteredList]);
-
   //알코올 필터링
   useEffect(() => {
     setAlcoholFilteredList(() => {
@@ -60,7 +54,7 @@ function AlcoholicOps() {
               ? styles.activeAlcoholicFilter
               : styles.alcoholicFilter
           }
-          value="All"
+          value='All'
           onClick={handleOnClick}
         >
           All
@@ -71,7 +65,7 @@ function AlcoholicOps() {
               ? styles.activeAlcoholicFilter
               : styles.alcoholicFilter
           }
-          value="Alcoholic"
+          value='Alcoholic'
           onClick={handleOnClick}
         >
           Alcoholic
@@ -82,7 +76,7 @@ function AlcoholicOps() {
               ? styles.activeAlcoholicFilter
               : styles.alcoholicFilter
           }
-          value="Non alcoholic"
+          value='Non alcoholic'
           onClick={handleOnClick}
         >
           Non-Alcoholic

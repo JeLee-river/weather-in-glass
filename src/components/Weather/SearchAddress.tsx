@@ -34,10 +34,6 @@ export function SearchAddress(): JSX.Element {
 
     // 주소 선택 이벤트
     selectAddress: (data: any) => {
-      console.log(`
-            주소: ${data.address},
-            우편번호: ${data.zonecode}
-        `);
       setAddress(data.address);
       setOpenPostcode(false);
     },

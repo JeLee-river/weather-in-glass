@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./QuizButton.module.scss";
+import React from 'react';
+import styles from './QuizButton.module.scss';
 
 type ButtonWrapperProps = {
   correct: boolean;
@@ -8,14 +8,12 @@ type ButtonWrapperProps = {
 };
 
 function ButtonWrapper({ correct, userClicked, children }: ButtonWrapperProps) {
-  console.log(correct);
-  console.log(userClicked);
-  let classNames = styles["button-wrapper"];
+  let classNames = styles['button-wrapper'];
   if (correct) {
     classNames += ` ${styles.correct}`;
   }
   if (userClicked) {
-    classNames += ` ${styles["user-clicked"]}`;
+    classNames += ` ${styles['user-clicked']}`;
   }
 
   return <div className={classNames}>{children}</div>;

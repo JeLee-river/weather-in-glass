@@ -244,7 +244,6 @@ export async function getCocktailDescription(id: number) {
     .then((data) => data.drinks[0])
     .catch((e) => console.log('Error: ', e));
 
-  console.log(drink);
   return drink;
 }
 

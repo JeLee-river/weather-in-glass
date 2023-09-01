@@ -14,11 +14,6 @@ function Checkbox({ isCheckedAll, setIsCheckedAll }: checkBoxPropsType) {
   const isChecked = useSelector((state: RootState) => state.isChecked);
   const dispatch = useDispatch<AppDispatch>();
 
-  // 디버깅
-  useEffect(() => {
-    console.log('isChecked 변경', isChecked);
-  }, [isChecked]);
-
   // 카테고리 체크박스에서 체크 이벤트가 발생했을 때 isChecked 목록 변경
   const handleIsChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = e.target;
@@ -69,7 +64,7 @@ function Checkbox({ isCheckedAll, setIsCheckedAll }: checkBoxPropsType) {
             className={styles.label}
           >
             <input
-              type="checkbox"
+              type='checkbox'
               className={styles.checkbox}
               id={`checkbox-${idx + 1}`}
               checked={isChecked.includes(category)}

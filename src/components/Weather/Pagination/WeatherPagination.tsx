@@ -23,11 +23,6 @@ function WeatherPagination({
     (_, index) => index + 1
   );
 
-  //디버깅
-  useEffect(() => {
-    console.log('현재페이지', currentPage);
-  }, [currentPage]);
-
   const handlePreviousPageClick = () => {
     if (currentPage > 1) {
       handlePageQueryChange(currentPage - 1);

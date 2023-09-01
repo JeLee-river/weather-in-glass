@@ -5,10 +5,6 @@ function ScrollHandler() {
   const [scrollHeight, setScrollHeight] = useState<number>(0);
 
   useEffect(() => {
-    console.log(scrollHeight);
-  }, [scrollHeight]);
-
-  useEffect(() => {
     const updateScrollHeight = () => {
       setScrollHeight(document.documentElement.scrollHeight);
     };

@@ -58,7 +58,6 @@ const GeocoderAPI = async (address: string) => {
       encodeURI(address) +
       `&type=road&key=${GEO_API_KEY}`;
     const response = await axios.get(URL);
-    //console.log(response.data.response.result.point);
     return response.data.response.result.point;
   } catch (err) {
     console.log(err);

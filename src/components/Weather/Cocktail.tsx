@@ -47,7 +47,6 @@ export function Cocktail({ mainWeather }: CocktailProps) {
       targetPageNumber = 1;
     }
     setCurrentPage(() => targetPageNumber);
-    console.log('targetPageNumber : ' + targetPageNumber);
     queryParams.set('page', targetPageNumber.toString());
     navigate(`?${queryParams.toString()}`);
   };
@@ -126,7 +125,7 @@ export function Cocktail({ mainWeather }: CocktailProps) {
               )}
             </Link>
             <Link to={`/detail/${drink.idDrink}`}>
-              <img src={drink.strDrinkThumb} alt="drink img"></img>
+              <img src={drink.strDrinkThumb} alt='drink img'></img>
             </Link>
           </div>
         ))}

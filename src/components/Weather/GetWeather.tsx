@@ -63,19 +63,17 @@ function GetWeather() {
   const mainWeather = weatherDetails[0].main;
   const iconUrl = `https://openweathermap.org/img/wn/${icon}.png`;
 
-  console.log(mainWeather);
-
   return (
     <Provider store={store}>
       <div className={styles.weather}>
         <div className={styles.title}>
           <h1>날씨가 {description}일 때 어울리는 칵테일 </h1>
-          <img className={styles.icon} src={iconUrl} alt="Weather Icon"></img>
+          <img className={styles.icon} src={iconUrl} alt='Weather Icon'></img>
         </div>
 
         <section className={styles.section}>
           <div>
-            <img src={iconUrl} alt="Weather Icon" />
+            <img src={iconUrl} alt='Weather Icon' />
             <p>현재 시각 : {<Clock></Clock>}</p>
             <p>현재 지역 : {name}</p>
             <p>온도 : {temperature}</p>

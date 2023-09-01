@@ -18,14 +18,6 @@ function Search({ wholeCocktails }: searchPropsType) {
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
 
   useEffect(() => {
-    console.log('검색결과', searchResults);
-  }, [searchResults]);
-
-  useEffect(() => {
-    console.log('쿼리', searchQuery);
-  }, [searchQuery]);
-
-  useEffect(() => {
     dispatch(setSearchResults(wholeCocktails));
   }, [wholeCocktails]);
 
@@ -56,12 +48,12 @@ function Search({ wholeCocktails }: searchPropsType) {
       <form className={styles.searchBar} onSubmit={handleSubmitQuery}>
         <input
           id={styles.inputBar}
-          type="text"
-          name="searchQuery"
-          placeholder="칵테일명을 입력해주세요."
+          type='text'
+          name='searchQuery'
+          placeholder='칵테일명을 입력해주세요.'
           onChange={handleSearchInputChange}
         />
-        <button id={styles.searchButton} type="submit">
+        <button id={styles.searchButton} type='submit'>
           검색
         </button>
       </form>

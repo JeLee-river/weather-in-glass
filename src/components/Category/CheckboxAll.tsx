@@ -5,11 +5,6 @@ import styles from './CheckboxAll.module.scss';
 function CheckboxAll() {
   const [isCheckedAll, setIsCheckedAll] = useState<boolean>(true);
 
-  //디버깅
-  useEffect(() => {
-    console.log('isCheckedAll 변경', isCheckedAll);
-  }, [isCheckedAll]);
-
   //All 체크박스에서 체크 이벤트가 발생했을 때 실행할 핸들러
   const handleIsCheckedAll = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsCheckedAll(() => e.target.checked);
@@ -18,13 +13,13 @@ function CheckboxAll() {
   return (
     <>
       <div className={styles.checkboxContainer}>
-        <label htmlFor="checkboxAll" className={styles.label}>
+        <label htmlFor='checkboxAll' className={styles.label}>
           <input
-            type="checkbox"
+            type='checkbox'
             className={styles.checkboxAll}
-            id="checkboxAll"
+            id='checkboxAll'
             checked={isCheckedAll}
-            value="All"
+            value='All'
             onChange={handleIsCheckedAll}
           />
           <span className={styles.checkmark}></span>All

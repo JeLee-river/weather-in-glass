@@ -23,7 +23,6 @@ function Ingredients() {
       const imgsPromises = ingredients.map((ingredient) =>
         getIngredientImg(ingredient)
       );
-      // console.log(imgsPromises);
       const imgsUrls = await Promise.all(imgsPromises);
       setIngredientImgs(imgsUrls);
     }
