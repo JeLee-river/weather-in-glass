@@ -1,10 +1,10 @@
-# **Project Weather of Cocktail**
+# **Project Weather In Glass**
 
 > 날씨에 어울리는 칵테일을 추천하는 서비스
 
 <br>
 
-[**Weather of Cocktail 방문하기**:cocktail:](https://weather-of-cocktail.vercel.app)
+[**Weather in Glass 방문하기**:cocktail:](https://weather-in-glass.vercel.app)
 
 <br>
 <br>
@@ -41,7 +41,7 @@
 1. 서비스 측면
 
 - 서비스 이용자의 기호에 맞는 칵테일 추천을 목적으로 한다.
-- 칵테일에 익숙하지 않거나 다양한 종류의 칵테일을 접하고 싶은 이용자를 타겟으로, 날씨, 퀴즈, 무작위 랜덤 기능을 토대로 칵테일을 추천하여 서비스 진입장벽을 낮추는 것을 목표로 한다.
+- 칵테일에 익숙하지 않거나 다양한 종류의 칵테일을 접하고 싶은 이용자를 타겟으로, 구체적인 칵테일 취향이 없더라도 칵테일을 추천받을 수 있는 서비스를 제공
 
 <br>
 
