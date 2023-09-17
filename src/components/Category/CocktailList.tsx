@@ -1,5 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useContext, useMemo } from 'react';
+import {
+  NavLink,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from 'react-router-dom';
 import { AlcoholFilteredListContext } from './AlcoholicOps';
 import { RootState } from '../../store/store';
 import Pagination from '../Common/Pagination';
@@ -15,11 +20,12 @@ function CocktailList() {
   const isChecked = useSelector((state: RootState) => state.isChecked);
   const [cocktailList, setCocktailList] = useState<cocktailListType[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
-
-  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
-  const queryParams = new URLSearchParams(location.search);
-  const pageNumber = parseInt(queryParams.get('page') || '1');
+
+  const pageNumber = useMemo(() => {
+    return Number(searchParams.get('page') ?? '1');
+  }, [searchParams]);
 
   const cocktailsPerPage = 20;
   const totalPages = Math.ceil(cocktailList.length / cocktailsPerPage);
@@ -40,7 +46,7 @@ function CocktailList() {
   }, [alcoholFilteredList, isChecked]);
 
   useEffect(() => {
-    setCurrentPage(() => pageNumber);
+    setCurrentPage(pageNumber);
   }, [pageNumber]);
 
   useEffect(() => {
@@ -49,8 +55,7 @@ function CocktailList() {
 
   const handlePageQueryChange = (targetPageNumber: number) => {
     setCurrentPage(() => targetPageNumber);
-    queryParams.set('page', targetPageNumber.toString());
-    navigate(`?${queryParams.toString()}`);
+    setSearchParams(`?page=${targetPageNumber}`);
   };
 
   return (
